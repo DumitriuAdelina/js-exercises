@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+	<body>
+		<script>
+
+			nr=0;
+			var paragraf=document.createElement("p");
+			paragraf.innerHTML=nr;
+			document.body.appendChild(paragraf);
+		    setInterval(function()
+				{
+					nr++;
+					paragraf.innerHTML=nr;
+				}, 1000);
+
+		
+		</script>
+	</body>
+</html>

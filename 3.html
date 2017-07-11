@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+	<body>
+		<script>
+		var paragraf=document.createElement("p");
+		paragraf.innerHTML="abcded"
+		document.body.appendChild(paragraf);
+		ok=1;
+		document.addEventListener("keypress",function(event)
+			{
+				var x = event.keyCode;
+				if (x == 113 && ok==1){paragraf.style.visibility = "hidden";ok=0;}
+				else {paragraf.style.visibility = "visible";ok=1;}
+			});
+		</script>
+	</body>
+</html>

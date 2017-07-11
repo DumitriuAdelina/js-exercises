@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<body>
+		
+		<script>
+			//1
+			var vector=["Mercur","Marte","Venus","Jupiter","un asteroid oarecare","o cometa in trecere"];
+			var select=document.createElement("select");
+			for(var i=0;i<vector.length;i++)
+			{
+				var optiune=document.createElement("option");
+				var text=document.createTextNode(vector[i]);
+				optiune.appendChild(text);
+				select.appendChild(optiune);
+				
+			}
+			
+			document.body.appendChild(select);
+
+			select.addEventListener("change",function()
+				{
+					var p=document.createElement("p");
+					var text=document.createTextNode("Am intalnit un extraterestru de pe " + select.options[select.selectedIndex].text);
+					p.appendChild(text);
+					document.body.appendChild(p);
+				});
+			
+		</script>
+	</body>
+</html>

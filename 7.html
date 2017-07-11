@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<body>
+		<script>
+
+			var buton=document.createElement("button");
+			document.body.appendChild(buton);
+			
+			buton.style.width="10px";
+			buton.style.height="10px";
+			
+			var h=buton.offsetHeight;
+			var w=buton.offsetWidth;
+			buton.addEventListener("click",function()
+			{
+				var h=buton.offsetHeight;
+				var w=buton.offsetWidth;
+				if(event.ctrlKey)
+				{
+					if(h!=10 && w!=10)
+					{
+						h=h-10;
+						w=w-10;
+						buton.style.width=w+"px";
+						buton.style.height=h+"px";
+					}
+				}	
+				else 
+				{
+					
+					h=h+10;
+					w=w+10;
+					buton.style.width=w+"px";
+					buton.style.height=h+"px";
+				}
+				
+				
+			});
+			
+			
+		</script>
+	</body>
+</html>

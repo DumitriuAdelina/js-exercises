@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<body>
+		<script>
+		
+			for(var i=1;i<=5;i++)
+			{
+				var paragraf=document.createElement("p");
+				paragraf.innerHTML="paragraf "+i;
+				document.body.appendChild(paragraf);
+			}
+			
+			var p=document.getElementsByTagName("p");
+			for(i=0;i<p.length;p++)
+				p[i].addEventListener("mouseover",function(e)
+					{
+						var x=e.currentTarget.innerHTML;
+						var y=x.toUpperCase();
+						e.currentTarget.innerHTML=y;
+					});			
+			
+		</script>
+	</body>
+</html>

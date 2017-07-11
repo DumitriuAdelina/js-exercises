@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Input de tip text, avand alaturi un buton</title>
+	</head>
+	<body>
+		<input type="text" id="textbox"><button id="buton">ok</button>
+		
+		<script>
+		var buton=document.getElementById("buton");
+		buton.addEventListener("click",function()
+			{
+				var p=document.getElementsByTagName("p")
+				var text=document.getElementById("textbox").value;
+				if(p.length=="0")
+				{
+					var paragraf=document.createElement("p");
+					paragraf.innerHTML=text;
+					document.body.appendChild(paragraf);
+				}
+				else p[0].innerHTML=text;
+				
+			});
+		</script>
+	</body>
+</html>
